@@ -24,30 +24,31 @@ O uso deste é permitido, desde que os devidos créditos sejam concedidos
             var horario_comeco
             
             //Ajustar formatação ao padrão utilizado nos formulários google, utilizando sempre horário no formado xx:xx e data xx/xx/xxxx
-            if (horas < 10){
-                var horario_comeco = "0" + horas + ":" + minutos
-            } 
-            if (minutos < 10) {
-                var horario_comeco = "" + horas + ":" + "0" + minutos
-            } 
             if (horas < 10 && minutos < 10){
                 var horario_comeco = "0" + horas + ":" + "0" + minutos
             }
             if (horas >= 10 && minutos >= 10){
                 var horario_comeco = "" + horas + ":" + minutos
             }
+            if (horas < 10){
+                var horario_comeco = "0" + horas + ":" + minutos
+            } 
+            if (minutos < 10) {
+                var horario_comeco = "" + horas + ":" + "0" + minutos
+            } 
+            
 
+            if (dia < 10 && mes < 10){
+                var dia_comeco = ano + "-0" + mes + "-0" + dia
+            }
+            if (dia >= 10 && mes >= 10){
+                var dia_comeco = ano + "-" + mes + "-" + dia
+            }
             if (dia < 10){
                 var dia_comeco = ano + "-" + mes + "-0" + dia
             }
             if (mes < 10){
                 var dia_comeco = ano + "-0" + mes + "-" + dia
-            }
-            if (dia < 10 && mes < 10){
-                var dia_comeco = ano + "-0" + mes + "-0" + dia
-            }
-            if (dia > 10 && mes > 10){
-                var dia_comeco = ano + "-" + mes + "-" + dia
             }
 
             // Pega a url e armazena na variável "link"
